@@ -11,6 +11,16 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         guess = (min + max) / 2;
+    }
+
+    public void Higher()
+    {
+        min = guess + 1;
+        guess = (min + max) / 2;
+    }
+
+    private void Update()
+    {
         guessText.text = guess.ToString();
     }
 }
